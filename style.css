@@ -225,6 +225,13 @@ h2 {
   line-height: 1.55;
 }
 
+.paper-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
 .doi-badge {
   font-family: var(--mono);
   font-size: 0.625rem;
@@ -238,11 +245,21 @@ h2 {
   white-space: nowrap;
   flex-shrink: 0;
   transition: background 0.15s, color 0.15s;
-  margin-top: 0.125rem;
 }
 
 .doi-badge:hover {
   background: var(--accent);
+  color: #fff;
+}
+
+.doi-badge.arxiv {
+  background: #1a1a0d;
+  color: #b5890a;
+  border-color: #3a3010;
+}
+
+.doi-badge.arxiv:hover {
+  background: #b5890a;
   color: #fff;
 }
 
