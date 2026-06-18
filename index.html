@@ -16,7 +16,9 @@
     <span class="nav-name">Mukund Pandey</span>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#work">Projects</a></li>
+      <li><a href="#contributions">Contributions</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -74,6 +76,29 @@
     </div>
   </section>
 
+  <section id="research">
+    <div class="section-inner">
+      <h2>Research</h2>
+      <div class="paper-card">
+        <div class="paper-header">
+          <span class="paper-title">Evaluating Agentic AI in the Wild: Failure Modes, Drift Patterns, and a Production Evaluation Framework</span>
+          <a href="https://doi.org/10.5281/zenodo.19947138" target="_blank" rel="noopener" class="doi-badge">DOI &#8599;</a>
+        </div>
+        <p class="paper-desc">
+          Identifies 7 failure modes in production agentic AI systems and introduces PAEF
+          (Production Agentic Evaluation Framework) &mdash; validated on four controlled
+          experiments. Reference implementation:
+          <a href="https://github.com/mukund1985/llm-eval-toolkit" target="_blank" rel="noopener">llm-eval-toolkit</a>.
+        </p>
+        <div class="paper-meta">
+          <span>Zenodo</span>
+          <span>2025</span>
+          <span>Agentic AI &middot; LLM Eval &middot; Production Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="work">
     <div class="section-inner">
       <h2>Projects</h2>
@@ -112,6 +137,22 @@
           </div>
         </a>
 
+        <a class="project-card" href="https://github.com/mukund1985/retrieval-ranking-eval" target="_blank" rel="noopener">
+          <div class="project-header">
+            <span class="project-name">retrieval-ranking-eval</span>
+            <span class="project-arrow">&#8599;</span>
+          </div>
+          <p class="project-desc">
+            Dense retrieval + cross-encoder reranking pipeline benchmarked on BEIR datasets.
+            Evaluates retrieval quality with NDCG@K, Recall@K, and MRR across multiple
+            domain corpora. Designed for reproducible IR benchmarking in production search
+            and RAG systems.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>Information Retrieval</span><span>RAG</span>
+          </div>
+        </a>
+
         <a class="project-card" href="https://github.com/mukund1985/QuantumAI-IntradayRiskDemo" target="_blank" rel="noopener">
           <div class="project-header">
             <span class="project-name">QuantumAI-IntradayRiskDemo</span>
@@ -119,13 +160,72 @@
           </div>
           <p class="project-desc">
             Intraday risk modelling combining quantum-inspired algorithms with
-            classical ML for real-time financial risk quantification. Reflects the
-            production ML constraints of quantitative finance: latency, explainability,
-            and regulatory accountability.
+            classical ML for real-time financial risk quantification. LSTM volatility
+            forecasting + QUBO/D-Wave portfolio optimisation. Reflects the production ML
+            constraints of quantitative finance: latency, explainability, and regulatory
+            accountability.
           </p>
           <div class="project-tags">
             <span>Python</span><span>Risk ML</span><span>Finance</span>
           </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contributions">
+    <div class="section-inner">
+      <h2>Contributions</h2>
+      <p class="section-sub">Upstream patches to production ML infrastructure.</p>
+      <div class="contrib-list">
+
+        <a class="contrib-item" href="https://github.com/TransformerLensOrg/TransformerLens/pull/1399" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">TransformerLensOrg/TransformerLens &middot; PR #1399</div>
+            <div class="contrib-desc">Adapter unit tests for Phi-3 and Granite/GraniteMoe (55 tests), part of issue #1302.</div>
+          </div>
+          <span class="contrib-status merged">Merged ✓</span>
+        </a>
+
+        <a class="contrib-item" href="https://github.com/TransformerLensOrg/TransformerLens/pull/1396" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">TransformerLensOrg/TransformerLens &middot; PR #1396</div>
+            <div class="contrib-desc">Direct path patching implementation (<code>get_act_patch_direct_path</code>), closing issue #111 opened by Neel Nanda in 2022. Supports HookedTransformer and TransformerBridge with full test suite.</div>
+          </div>
+          <span class="contrib-status open">Open</span>
+        </a>
+
+        <a class="contrib-item" href="https://github.com/evidentlyai/evidently/pull/1318" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">evidentlyai/evidently &middot; PR #1318</div>
+            <div class="contrib-desc">ROUGE score descriptor &mdash; rouge1/2/L with F/P/R variants. 737 lines, 31 tests.</div>
+          </div>
+          <span class="contrib-status merged">Merged ✓</span>
+        </a>
+
+        <a class="contrib-item" href="https://github.com/evidentlyai/evidently" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">evidentlyai/evidently</div>
+            <div class="contrib-desc">KL-divergence drift score bug fix.</div>
+          </div>
+          <span class="contrib-status merged">Merged ✓</span>
+        </a>
+
+        <a class="contrib-item" href="https://github.com/vllm-project/vllm/pull/46068" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">vllm-project/vllm &middot; PR #46068</div>
+            <div class="contrib-desc">Reject invalid negative values for <code>max_logprobs</code> and <code>long_prefill_token_threshold</code> via Pydantic field validators. Closes issue #43985.</div>
+          </div>
+          <span class="contrib-status open">Open</span>
+        </a>
+
+        <a class="contrib-item" href="https://github.com/vllm-project/vllm/pull/41381" target="_blank" rel="noopener">
+          <div class="contrib-body">
+            <div class="contrib-repo">vllm-project/vllm &middot; PR #41381</div>
+            <div class="contrib-desc">torch.compile config hash typing cleanups and <code>cache_key_factors</code> debug expansion.</div>
+          </div>
+          <span class="contrib-status open">Open</span>
         </a>
 
       </div>
